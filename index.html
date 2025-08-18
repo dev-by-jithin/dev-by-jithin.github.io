@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Admin Dashboard</title>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2/css/pico.min.css">
+
+	</head>
+	<body>
+		<div id="app" class="container-fluid">
+			<h1>To Do List</h1>
+			<form>
+				<fieldset role="group">
+					<input placeholder="Enter task here..." v-model="item" aria-invalid="true" aria-describedby="invalid-helper"/>
+					<input type="button" value="+" v-on:click="add()"/>
+					<small id="invalid-helper">
+						Please provide a valid value!
+					</small>
+				</fieldset>
+				<ul>
+					<li v-for="(list, index) in lists" v-bind:key="index">{{list}}</li>
+
+				</ul>
+			</form>
+		</div>
+
+
+		<script>
+			const app = Vue.createApp({
+				data() {
+					return {item: "", lists: []}
+				},
+				methods: {
+					add() {
+						if (this.item.trim() !== "") {
+							this.lists.push(this.item);
+							console.log(this.lists);
+						}
+
+					}
+
+
+				}
+			});
+
+			app.mount('#app');
+		</script>
+
+		<style>
+			h1 {
+				color: blueviolet;
+			}
+		</style>
+	</body>
+</html>
