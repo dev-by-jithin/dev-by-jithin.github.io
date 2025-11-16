@@ -43,13 +43,13 @@ p{
 }
 
 body{
- width: 100vw;
+ width: 100%;
  min-height: 100vh;
  background: var(--primary-bg-color);
 }
 
 .container{
- width: 90%;
+ width: 80%;
  margin: 0 auto;
 }
 
@@ -75,7 +75,7 @@ nav ul li a{
  position: relative;
  padding-bottom: 5px; 
  transition: border 300ms ease; 
- font-size: 2rem;
+ font-size: 1.5rem;
  color: var(--primary-font-color);
 }
 
@@ -111,8 +111,38 @@ nav ul li a:hover::after{
 .hero .profile{
  width: 50%;
 }
+.hero .profile ul{
+    display: flex;
+    gap: 1rem;
+    margin:1.5rem auto;
+}
+.hero .profile ul li a{
+    height: 30px;
+    width: 30px;
+    border:1px solid var(--primary-font-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-font-color);
+}
 .hero .profile label{
  font-size: 2rem; 
+}
+.hero .profile h2{
+ margin-bottom: 1rem; 
+}
+
+.hero .profile button{
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    font-size: 1rem;
+    background: white;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 .hero .profile-image{
@@ -131,18 +161,59 @@ nav ul li a:hover::after{
 
 
 .about-container{
- display: flex;
- justify-content: space-between;
+ display: grid;
+ grid-template-columns: 1fr 2fr;
  align-items: center;
- gap: 4rem;
+ gap: 3rem;
+}
+
+.about-container .about-image img{
+    width: 100%;
 }
 
 
 .skill-container{
  display: grid;
- grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
  gap: 1rem;
  align-items: center;
+}
+
+.skill-container .skill{
+    border: 1px solid var(--primary-font-color);
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 400ms ease;
+}
+
+.skill-container .skill i{
+    font-size: 3.5rem;
+    transition: transform 500ms ease;
+}
+
+.skill-container .skill h6{
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.skill-container .skill:hover{
+    box-shadow: 5px 5px 7px 1px var(--secondary-font-color);
+    padding-bottom: 0;
+}
+
+.skill-container .skill:hover i{
+    transform: translateY(-1.7rem);
+}
+
+.skill-container .skill:hover h6{
+    opacity: 1;
 }
 
 
