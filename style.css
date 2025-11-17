@@ -49,6 +49,22 @@ body {
  background: var(--primary-bg-color);
 }
 
+button {
+ border-radius: 2rem;
+ padding: 1rem 2.3rem;
+ border: 1px solid black;
+ font-size: 1rem;
+ background: white;
+ cursor: pointer;
+ transition: background 400ms ease, color 499ms ease;
+}
+
+button:hover {
+ background: var(--primary-color);
+ color: var(--primary-bg-color);
+ box-shadow: 0 0 1rem 1px var(--secondary-color);
+}
+
 .container {
  width: 80%;
  margin: 0 auto;
@@ -126,6 +142,13 @@ nav ul li a:hover::after {
  justify-content: center;
  align-items: center;
  color: var(--primary-color);
+ transition: background 400ms ease, color 400ms ease;
+}
+
+.hero .profile ul li a:hover {
+ background: var(--primary-color);
+ color: var(--primary-bg-color);
+ box-shadow: 0 0 1rem 1px var(--secondary-color);
 }
 
 .hero .profile label {
@@ -178,14 +201,7 @@ nav ul li a:hover::after {
  }
 }
 
-button {
- border-radius: 2rem;
- padding: 1rem 2.3rem;
- border: 1px solid black;
- font-size: 1rem;
- background: white;
- cursor: pointer;
-}
+
 
 
 .hero .profile-image {
@@ -291,7 +307,7 @@ button {
 .about h2,
 .skills h2,
 .services h2,
- .contact h2 {
+.contact h2 {
  text-align: center;
  margin-bottom: 3rem;
 }
@@ -361,11 +377,11 @@ button {
  opacity: 1;
 }
 
-.services{
+.services {
  margin: 5rem auto;
 }
 
-.service-container{
+.service-container {
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
  justify-content: center;
@@ -374,19 +390,22 @@ button {
  text-align: center;
 }
 
-.service-container .service{
+.service-container .service {
  padding: 3rem;
  width: 400px;
  border-radius: 10px;
  position: relative;
  background: var(--primary-bg-color);
 }
-@property --angle{
+
+@property --angle {
  syntax: "<angle>";
  initial-value: 0deg;
  inherits: false;
 }
-.service-container .service::before, .service-container .service::after{
+
+.service-container .service::before,
+.service-container .service::after {
  content: '';
  position: absolute;
  width: 100%;
@@ -403,22 +422,22 @@ button {
 }
 
 @keyframes spin {
- from{
-  --angle:0deg;
+ from {
+  --angle: 0deg;
  }
- to{
-  --angle:360deg;
+
+ to {
+  --angle: 360deg;
  }
- 
+
 }
 
-.service-container .service::before{
+.service-container .service::before {
  filter: blur(1.5rem);
  opacity: 0.5;
 }
 
-
-.service-container .service h4{
+.service-container .service h4 {
  margin-bottom: 1.5rem;
 }
 
