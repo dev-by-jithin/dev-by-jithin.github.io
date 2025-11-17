@@ -244,6 +244,16 @@ button:hover {
   }
 }
 
+.about h2,
+.skills h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about {
+  margin: 5rem auto;
+}
+
 .about-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
