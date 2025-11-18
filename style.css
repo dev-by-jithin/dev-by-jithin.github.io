@@ -363,7 +363,7 @@ nav ul li a:hover::after {
 
 .skill-container .skill i {
   font-size: 3.5rem;
-  transition: transform 500ms ease;
+  transition: transform 500ms ease, filter 500ms ease, color 500ms ease;
 }
 
 .skill-container .skill h6 {
@@ -380,6 +380,7 @@ nav ul li a:hover::after {
 .skill-container .skill:hover i {
   transform: translateY(-2rem) scale(1.15);
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.3));
+  color: var(--secondary-color);
 }
 
 .skill-container .skill:hover h6 {
@@ -394,14 +395,12 @@ nav ul li a:hover::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
-  align-items: center;
   gap: 1rem;
   text-align: center;
 }
 
 .service-container .service {
   padding: 3rem;
-  /* min-height: 35rem; */
   border-radius: 10px;
   position: relative;
   background: var(--primary-bg-color);
