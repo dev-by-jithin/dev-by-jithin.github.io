@@ -318,7 +318,7 @@ nav ul li a:hover::after {
 .services h2,
 .contact h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 4rem 0;
 }
 
 .about {
@@ -433,10 +433,10 @@ nav ul li a:hover::after {
   /* background-image: conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545); */
   background-image: conic-gradient(
     from var(--angle),
-    transparent 85%,
+    transparent 60%,
     var(--primary-color)
   );
-  animation: spin 3s linear infinite;
+  animation: spin 5s linear infinite;
 }
 
 @keyframes spin {
@@ -502,3 +502,15 @@ footer ul a{
 footer a:hover{
     text-shadow: 1px 1px 2px var(--secondary-color);
 }
+
+
+
+@media (max-width: 1024px) {
+  
+
+
+
+
+}
+
+
