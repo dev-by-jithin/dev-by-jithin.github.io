@@ -159,7 +159,7 @@ nav ul li a:hover::after {
 .hero .profile ul {
   display: flex;
   gap: 1rem;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 2.9rem auto;
 }
 
 .hero .profile ul li a {
