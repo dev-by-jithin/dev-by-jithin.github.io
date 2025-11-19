@@ -40,7 +40,13 @@
             <li><a href="#service">Service</a></li>
             <li><a href="#contact">Let's Connect</a></li>
           </ul>
+          <div class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
+        
       </div>
     </header>
 
@@ -298,6 +304,11 @@
       </ul>
     </footer>
   </body>
+  <script>
+    document.querySelector('.toggle').addEventListener('click', function () {
+    this.classList.toggle('active');
+});
+  </script>
   <script>
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/service-worker.js")

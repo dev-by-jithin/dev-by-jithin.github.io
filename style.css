@@ -85,6 +85,9 @@ nav {
   align-items: center;
   height: 5rem;
 }
+header nav .toggle{
+  display: none;
+}
 
 nav .logo a {
   font-size: 3rem;
@@ -560,6 +563,66 @@ nav ul li a {
   h6 { font-size: 0.9rem; }
   p  { font-size: 1.1rem; }
 
+  header nav ul{
+    display: none;
+  }
+
+  header nav .toggle{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  header nav .toggle span{
+  display: block;
+  width: 23px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+.toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.hero{
+  flex-direction: column-reverse;
+  padding-top: 7rem;
+}
+
+.hero .profile {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.about-container {
+  grid-template-columns: 1fr;
+}
+
+.skill-container {
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+}
+
+.contact-container {
+  width: 75%;
+}
+
+footer ul {
+  gap: .4rem;
+}
+
+footer ul:first-child {
+  display: none;
+}
 
 }
 
