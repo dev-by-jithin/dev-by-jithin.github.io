@@ -71,13 +71,13 @@ button:hover {
   margin: 0 auto;
 }
 
-/* header{
+header{
     position: fixed;
     width: 100%;
     top: 0;
     background: var(--primary-bg-color);
     z-index: 0;
-} */
+}
 
 nav {
   display: flex;
@@ -130,6 +130,7 @@ nav ul li a:hover::after {
   align-items: center;
   margin: 5rem auto;
   min-height: 75vh;
+  padding-top: 5rem;
 }
 
 .hero .profile {
@@ -506,11 +507,61 @@ footer a:hover{
 
 
 @media (max-width: 1024px) {
-  
+  h1 { font-size: 2.7rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.4rem; }
+  h4 { font-size: 1.6rem; }
+  h5 { font-size: 1.3rem; }
+  h6 { font-size: 0.95rem; }
+  p  { font-size: 1.3rem; }
+
+  .container {
+  width: 90%;
+}
+
+nav {
+  height: 4rem;
+}
+nav ul {
+  gap: 1rem;
+}
+nav ul li a {
+  font-size: 1.3rem;
+}
+
+.hero .profile label {
+  font-size: 1.5rem;
+}
+
+.hero .profile-image {
+  height: 275px;
+  width: 275px;
+}
+
+.hero {
+  margin: 0 auto;
+  min-height: 65vh;
+  padding-top: 0rem;
+}
+
+.about {
+  margin: 0 auto;
+}
+
+}
 
 
+@media (max-width: 600px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.6rem; }
+  h4 { font-size: 1.4rem; }
+  h5 { font-size: 1.2rem; }
+  h6 { font-size: 0.9rem; }
+  p  { font-size: 1.1rem; }
 
 
 }
+
 
 
