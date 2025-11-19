@@ -66,6 +66,21 @@ button:hover {
   box-shadow: 0 0 1rem 1px var(--secondary-color);
 }
 
+.button{
+  border-radius: 2rem;
+  padding: 1rem 2.3rem;
+  border: 1px solid black;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: background 400ms ease, color 499ms ease;
+}
+.button:hover {
+  background: var(--primary-color);
+  color: var(--primary-bg-color);
+  box-shadow: 0 0 1rem 1px var(--secondary-color);
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
