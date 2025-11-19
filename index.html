@@ -350,6 +350,16 @@
 	}
 </script>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M66WHJST2F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M66WHJST2F');
+</script>
+
 	<script>
 		if ("serviceWorker" in navigator) {
 			navigator.serviceWorker.register("/service-worker.js").then(() => console.log("Service Worker registered")).catch(err => console.error("SW reg failed:", err));
