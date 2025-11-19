@@ -18,7 +18,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 h4 {
@@ -368,7 +368,7 @@ nav ul li a:hover::after {
   transition: transform 500ms ease, filter 500ms ease, color 500ms ease;
 }
 
-.skill-container .skill h6 {
+.skill-container .skill h3 {
   font-weight: 800;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -385,7 +385,7 @@ nav ul li a:hover::after {
   color: var(--secondary-color);
 }
 
-.skill-container .skill:hover h6 {
+.skill-container .skill:hover h3 {
   opacity: 1;
 }
 
@@ -516,7 +516,7 @@ footer a:hover {
   }
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   h4 {
@@ -583,7 +583,7 @@ footer a:hover {
   }
 
   h3 {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 
   h4 {
