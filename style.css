@@ -52,6 +52,10 @@ body {
   background: var(--primary-bg-color);
 }
 
+header.z-up {
+  z-index: 3;
+}
+
 button {
   border-radius: 2rem;
   padding: 1rem 2.3rem;
@@ -348,7 +352,7 @@ nav ul li a:hover::after {
 }
 
 .about {
-  margin: 5rem auto;
+  padding: 3rem 0;
 }
 
 .about-container {
@@ -363,7 +367,7 @@ nav ul li a:hover::after {
 }
 
 .skills {
-  margin: 5rem auto;
+  padding: 3rem 0;
 }
 
 .skill-container {
@@ -414,7 +418,7 @@ nav ul li a:hover::after {
 }
 
 .services {
-  margin: 5rem auto;
+  padding: 3rem 0;
 }
 
 .service-container {
@@ -483,7 +487,7 @@ nav ul li a:hover::after {
 }
 
 .contact {
-  margin: 5rem auto;
+  padding: 3rem 0;
 }
 
 .contact-container {
@@ -507,8 +511,9 @@ nav ul li a:hover::after {
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
   align-items: center;
   height: 5rem;
 }
@@ -517,6 +522,11 @@ footer ul {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  justify-content: center;
+}
+
+footer ul:nth-of-type(2){
+  justify-content: flex-end;
 }
 
 footer ul a {
@@ -590,8 +600,13 @@ footer a:hover {
     padding-top: 0rem;
   }
 
-  .about {
-    margin: 0 auto;
+  footer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer ul:nth-of-type(1) {
+    display: none;
   }
 
 }
@@ -688,8 +703,6 @@ footer a:hover {
     gap: .4rem;
   }
 
-  footer ul:nth-of-type(1) {
-    display: none;
-  }
+  
 
 }

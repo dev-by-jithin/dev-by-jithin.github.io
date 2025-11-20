@@ -10,7 +10,7 @@
 
 				gtag('config', 'G-VVDQ08ETS4');
 		</script>
-	
+		<meta charset="utf-8"/>
 		<!-- Primary Meta Tags -->
 		<title>Jithin Pillakkat | Fullstack Engineer</title>
 		<meta name="title" content="Jithin Pillakkat | Fullstack Engineer">
@@ -20,20 +20,22 @@
 		<meta name="keywords" content="Jithin Pillakkat, Fullstack Developer, Fullstack Engineer, Web Developer, Mobile App Developer, Portfolio, Frontend Developer, Backend Developer">
 		<meta name="author" content="Jithin Pillakkat">
 		<meta name="robots" content="index, follow">
+		<link rel="canonical" href="https://dev-by-jithin.github.io/">
+
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Jithin Pillakkat | Fullstack Engineer">
 		<meta property="og:description" content="Fullstack Engineer with experience in building responsive websites, mobile apps, and scalable backend systems.">
-		<meta property="og:image" content="https://yourdomain.com/og-image.jpg">
-		<meta property="og:url" content="https://yourdomain.com/">
+		<meta property="og:image" content="https://dev-by-jithin.github.io/og-image.jpg">
+		<meta property="og:url" content="//dev-by-jithin.github.io/">
 		<meta property="og:site_name" content="Jithin Pillakkat Portfolio">
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="Jithin Pillakkat | Fullstack Engineer">
 		<meta name="twitter:description" content="Fullstack Engineer building modern web apps, mobile apps, and scalable backend systems.">
-		<meta name="twitter:image" content="https://yourdomain.com/og-image.jpg">
+		<meta name="twitter:image" content="//dev-by-jithin.github.io/og-image.jpg">
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
@@ -42,14 +44,13 @@
 		<link rel="manifest" href="site.webmanifest">
 
 		<!-- Viewport & Theme -->
-		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#0f172a">
 	
 		<!-- CDN Links  -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
-		<link rel="stylesheet" href="style.css?v=2.1"/>
+		<link rel="stylesheet" href="style.css?v=2.2"/>
 		
 		
 	</head>
@@ -60,9 +61,9 @@
 		<!-- End Google Tag Manager (noscript) -->
 		<header>
 			<div class="container">
-				<nav role="navigation">
+				<nav aria-label="Main navigation">
 					<div class="logo">
-						<a href="https://dev-by-jithin.github.io" area-label="Reload the page">
+						<a href="https://dev-by-jithin.github.io" aria-label="Reload the page">
 							<i class="devicon-htmx-plain colored"></i>
 						</a>
 					</div>
@@ -74,7 +75,7 @@
 							<a href="#about" aria-label="Read more about Jithin Pillakkat">About</a>
 						</li>
 						<li>
-							<a href="#skill" ariea-labal="To see all Jithin Pillakkat's skill sets">Skill</a>
+							<a href="#skill" aria-label="To see all Jithin Pillakkat's skill sets">Skill</a>
 						</li>
 						<li>
 							<a href="#service" aria-label="Jithin Pillakkat's providing services">Service</a>
@@ -127,7 +128,7 @@
 				<a href="#contact" class="button" id="lets-connect">Let's Connect</a>
 			</div>
 			<div class="profile-image" role="banner">
-				<img src="./images/jithin-pillakkat.webp" alt="jithin-pillakkat"/>
+				<img src="./images/jithin-pillakkat.webp" alt="Portfolio of Fullstack Engineer Jithin Pillakkat"/>
 				<div class="glow-effect"></div>
 			</div>
 		</section>
@@ -136,7 +137,7 @@
 			<h2>About</h2>
 			<div class="about-container">
 				<div class="about-image">
-					<img src="./images/about.webp" alt="about-jithin"/>
+					<img src="./images/about.webp" alt="About section image for Jithin Pillakkat portfolio"/>
 				</div>
 				<div class="about-content">
 					<p>
@@ -339,8 +340,8 @@
 				<li><a href="https://github.com/dev-by-jithin" target="_blank"><i class="fa-brands fa-github"></i></a></li>
 			</ul>
 		</footer>
-	</body>
 
+		<script src="./app.js"></script>
 	<script>
 		document.querySelector('.toggle').addEventListener('click', function () {
 			this.classList.toggle('active');
@@ -365,6 +366,11 @@
 			navigator.serviceWorker.register("/service-worker.js").then(() => console.log("Service Worker registered")).catch(err => console.error("SW reg failed:", err));
 		}
 	</script>
+
+
+
+	</body>
+
 
 </html>
 
