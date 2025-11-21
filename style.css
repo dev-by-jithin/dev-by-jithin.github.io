@@ -43,7 +43,7 @@ p {
   --primary-bg-color: white;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -53,7 +53,8 @@ body {
 }
 
 header.z-up {
-  z-index: 3;
+  z-index: 7;
+  box-shadow: 0 .3rem 1rem var(--secondary-color);
 }
 
 button {
@@ -72,7 +73,7 @@ button:hover {
   box-shadow: 0 0 1rem 1px var(--secondary-color);
 }
 
-.button{
+.button {
   border-radius: 2rem;
   padding: 1rem 2.3rem;
   border: 1px solid black;
@@ -82,6 +83,7 @@ button:hover {
   cursor: pointer;
   transition: background 400ms ease, color 499ms ease;
 }
+
 .button:hover {
   background: var(--primary-color);
   color: var(--primary-bg-color);
@@ -161,12 +163,12 @@ nav ul li a:hover::after {
 
 .hero .profile {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   align-items: flex-start;
   width: 50%;
 }
 
-.hero .profile p{
+.hero .profile p {
   padding: 1rem 0;
 }
 
@@ -281,7 +283,7 @@ nav ul li a:hover::after {
     0 0 150px rgba(0, 0, 0, 0.3);
   animation: glow 3s infinite alternate, morph 12s ease-in-out infinite;
   position: relative;
-  z-index: 10;
+  z-index: 4;
   background: linear-gradient(45deg,
       var(--primary-bg-color),
       var(--secondary-color));
@@ -525,7 +527,7 @@ footer ul {
   justify-content: center;
 }
 
-footer ul:nth-of-type(2){
+footer ul:nth-of-type(2) {
   justify-content: flex-end;
 }
 
@@ -538,7 +540,11 @@ footer a:hover {
   text-shadow: 1px 1px 2px var(--secondary-color);
 }
 
-
+@media (max-width: 1200px) {
+  .hero .profile h2 {
+    font-size: 1.4rem;
+  }
+}
 
 @media (max-width: 1024px) {
   h1 {
@@ -546,7 +552,7 @@ footer a:hover {
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
 
   h3 {
@@ -600,7 +606,7 @@ footer a:hover {
     padding-top: 0rem;
   }
 
-  footer{
+  footer {
     display: flex;
     justify-content: space-between;
   }
@@ -641,13 +647,70 @@ footer a:hover {
     font-size: 1.1rem;
   }
 
+  nav {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    perspective: 500px;
+
+  }
+
+  .nav-links.show {
+    display: block;
+  }
+
+  .nav-links li {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--secondary-color);
+    background: var(--primary-bg-color);
+    box-shadow: 0 .5rem 1rem var(--secondary-color);
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    animation: navigation 1s ease forwards;
+    opacity: 0;
+  }
+
+  .nav-links li:nth-child(2) {
+    animation-delay: 300ms;
+    transform-origin: top left;
+    transform: rotateZ(90deg) rotateY(90deg);
+  }
+
+  .nav-links li:nth-child(3) {
+    animation-delay: 600ms;
+  }
+
+  .nav-links li:nth-child(4) {
+    animation-delay: 900ms;
+    transform-origin: top left;
+    transform: rotateZ(90deg) rotateY(90deg);
+  }
+
+  .nav-links li:nth-child(5) {
+    animation-delay: 1.2s;
+  }
+
+  @keyframes navigation {
+    to {
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
+
+  nav ul li a:hover::after {
+    width: 0;
+  }
+
   nav .logo a {
     font-size: 2.5rem;
   }
 
-  header nav ul {
-    display: none;
-  }
 
   header nav .toggle {
     display: flex;
@@ -692,7 +755,7 @@ footer a:hover {
   }
 
   .skill-container {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
   .contact-container {
@@ -702,7 +765,4 @@ footer a:hover {
   footer ul {
     gap: .4rem;
   }
-
-  
-
 }
