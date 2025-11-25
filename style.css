@@ -389,7 +389,7 @@ nav ul li a:hover::after {
 }
 
 .skill-container .skill p {
-  font-weight: 800;
+  font-weight: 600;
   opacity: 0;
   transition: opacity 500ms ease;
 }
